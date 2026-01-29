@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>筋トレカレンダー</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>筋トレカレンダー</h1>
+
+  <!-- カレンダー本体 -->
+   <div class="calendar-nav">
+  <button id="prev-month">←</button>
+  <span id="calendar-title"></span>
+  <button id="next-month">→</button>
+</div>
+
+<div id="calendar" class="card"></div>
+
+  <div id="calendar" class="card"></div>
+
+  <!-- 選択した日のトレ内容 -->
+  <div class="card">
+    <h3 id="selected-date-title">日付を選択してください</h3>
+    <ul id="day-log-list"></ul>
+  </div>
+
+  <!-- 入力フォーム -->
+  <div class="card">
+    <h3>トレーニング入力</h3>
+
+    <div class="form-group">
+      <label for="bodypart">部位</label>
+      <select id="bodypart">
+        <option value="胸">胸</option>
+        <option value="背中">背中</option>
+        <option value="足">足</option>
+        <option value="肩">肩</option>
+        <option value="腕">腕</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exercise">種目</label>
+      <select id="exercise"></select>
+      <button id="add-exercise-btn">＋ 種目追加</button>
+    </div>
+
+    <div class="form-group" id="exercise-add-area" style="display:none;">
+      <input type="text" id="new-exercise" placeholder="新しい種目名">
+      <button id="save-exercise-btn">保存</button>
+    </div>
+
+    <div id="sets-area"></div>
+    <button id="add-set-btn">＋ セット追加</button>
+
+    <button id="add-btn">追加</button>
+    <button id="update-btn" style="display:none;">更新</button>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
